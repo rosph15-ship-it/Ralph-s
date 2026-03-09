@@ -1,213 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VA Portfolio</title>
-  <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
+<meta charset="UTF-8">
+<title>Website Creation Tutorial</title>
 
-    html, body {
-      height: 100%;
-      background: linear-gradient(135deg, #000000, #2a003f); /* Black to dark purple */
-      color: #ffffff;
-    }
+<style>
 
-    a {
-      color: #9b59b6;
-      text-decoration: none;
-    }
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #066b3c);
+    background-attachment: fixed;
+    min-height:100vh;
+    color:white;
+    text-align:center;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+/* HEADER */
 
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
+header{
+    padding:40px;
+    font-size:40px;
+    font-weight:bold;
+    text-shadow:0 0 10px #00ff88;
+}
 
-    /* Header */
-    header {
-      text-align: center;
-      padding: 2rem 0;
-    }
+/* GENERAL SECTIONS */
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #ffffff;
-    }
+section{
+    padding:40px 20px;
+}
 
-    header p {
-      font-size: 1.2rem;
-      color: #cccccc;
-    }
+h3{
+    margin-top:60px;
+    text-shadow:0 0 8px #00ff88;
+}
 
-    /* Section Styles */
-    section {
-      margin: 4rem 0;
-    }
+/* PROMPT BOX */
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #9b59b6;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-    }
+.prompt-box{
+    max-width:900px;
+    margin:auto;
+    background:#111;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 20px #00ff88;
+    text-align:left;
+}
 
-    /* Testimonials */
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
+pre{
+    white-space:pre-wrap;
+    font-size:14px;
+}
 
-    .testimonial {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(155, 89, 182, 0.2);
-    }
+/* CARD CONTAINER */
 
-    .testimonial p {
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
+.container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
 
-    .testimonial span {
-      font-weight: bold;
-      color: #9b59b6;
-    }
+/* CARDS */
 
-    /* Proof of Work */
-    .work {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
+.card{
+    width:300px;
+    background:#111;
+    border-radius:12px;
+    padding:20px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 15px #00ff88;
+}
 
-    .work-item {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px #00ff88;
+}
 
-    .work-item:hover {
-      transform: scale(1.05);
-    }
+.card img{
+    width:100%;
+    border-radius:10px;
+}
 
-    .work-item img {
-      max-width: 100%;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
-    }
+.card h2{
+    margin-top:15px;
+    font-size:20px;
+}
 
-    /* Footer */
-    footer {
-      position: sticky;
-      bottom: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.85);
-      text-align: center;
-      padding: 1rem 0;
-      color: #888888;
-      font-size: 0.9rem;
-    }
+/* FOOTER */
 
-    /* Button (Optional CTA) */
-    .cta-btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: #9b59b6;
-      color: #fff;
-      border-radius: 5px;
-      margin-top: 1rem;
-      transition: background 0.3s;
-    }
+footer{
+    padding:30px;
+    font-size:14px;
+    opacity:0.8;
+}
 
-    .cta-btn:hover {
-      background-color: #7d3c98;
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Melanie Aying- Virtual Assistant</h1>
-    <p>Helping businesses streamline their workflow efficiently.</p>
-  </header>
+<header>
+Website Creation Tutorial
+</header>
 
-  <div class="container">
+<main>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Placeholder text for your introduction. Highlight your skills, experience, and what makes you a standout Virtual Assistant.</p>
-    </section>
+<!-- LEARNING TUTORIALS -->
 
-    <!-- Proof of Work Section -->
-    <section id="work">
-      <h2>Proof of Work</h2>
-      <div class="work">
-        <div class="work-item">
-          <img src="https://via.placeholder.com/300x200" alt="Project 1">
-          <p>Project Name 1</p>
-        </div>
-        <div class="work-item">
-          <img src="https://via.placeholder.com/300x200" alt="Project 2">
-          <p>Project Name 2</p>
-        </div>
-        <div class="work-item">
-          <img src="https://via.placeholder.com/300x200" alt="Project 3">
-          <p>Project Name 3</p>
-        </div>
-      </div>
-    </section>
+<section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-      <h2>Testimonials</h2>
-      <div class="testimonials">
-        <div class="testimonial">
-          <p>"Placeholder for client testimonial. Highlighting positive experience."</p>
-          <span>- Client Name 1</span>
-        </div>
-        <div class="testimonial">
-          <p>"Another testimonial goes here. Showcasing reliability and skill."</p>
-          <span>- Client Name 2</span>
-        </div>
-        <div class="testimonial">
-          <p>"Third testimonial placeholder. Demonstrating client satisfaction."</p>
-          <span>- Client Name 3</span>
-        </div>
-      </div>
-    </section>
+<h2>Learning Tutorials</h2>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Placeholder for contact info or a contact form. Include email, social links, or a simple form here.</p>
-      <a href="mailto:janedoe@example.com" class="cta-btn">Get in Touch</a>
-    </section>
+<!-- WEBSITE DEVELOPMENT -->
 
-  </div>
+<h3>Website Development</h3>
 
-  <footer>
-    &copy; 2026 Melanie Aying. All Rights Reserved.
-  </footer>
+<div class="container">
+
+<div class="card" onclick="go('https://www.youtube.com/watch?v=DHGhFJZLKMs')">
+<img src="WEB1.png">
+<h2>HTML CSS JS Basics Overview</h2>
+</div>
+
+<div class="card" onclick="go('https://www.youtube.com/watch?v=_GTMOmRrqkU')">
+<img src="webdevbg.png">
+<h2>HTML CSS JS Full Course</h2>
+</div>
+
+</div>
+
+<!-- GITHUB -->
+
+<h3>GitHub Tutorial</h3>
+
+<div class="container">
+
+<div class="card" onclick="go('https://www.youtube.com/watch?v=BT4WzyT2g8k')">
+<img src="githubbg.png">
+<h2>GitHub Upload Tutorial</h2>
+</div>
+
+</div>
+
+<!-- DNS -->
+
+<h3>DNS & Domain Tutorials</h3>
+
+<div class="container">
+
+<div class="card" onclick="go('https://www.youtube.com/watch?v=UVR9lhUGAyU')">
+<img src="dnsbg.png">
+<h2>DNS & Domain Definition</h2>
+</div>
+
+<div class="card" onclick="go('https://www.youtube.com/watch?v=EX4w9hsduNA')">
+<img src="dnsbg2.png">
+<h2>Add Custom Domain to Website</h2>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AI PROMPT SECTION -->
+
+<section>
+
+<h2>Example AI Prompt for Website Creation</h2>
+
+<div class="prompt-box">
+
+<p>Create a complete website in a single file called <strong>index.html</strong>.</p>
+
+<pre>
+Requirements:
+- Use HTML, CSS, and JavaScript in one file.
+- All styling must be inside a style tag.
+- All scripts must be inside a script tag.
+- The design must be modern, clean, and responsive.
+- Use semantic HTML where possible.
+
+Website Details:
+
+Website Title:
+[INSERT WEBSITE TITLE]
+
+Purpose:
+[What the website is for]
+
+Theme / Style:
+[Example: cyberpunk, neon, minimal, glassmorphism, modern tech]
+
+Color Palette:
+[Example: black background with neon green accents]
+
+Layout Sections:
+
+1. Header
+   - Title
+   - Optional navigation
+
+2. Hero Section
+   - Main headline
+   - Subtitle
+   - Call to action button
+
+3. Main Content
+   - Describe the content blocks you want
+
+4. Cards / Features
+   - Number of cards: X
+   - Each card contains:
+        - image
+        - title
+        - description
+        - clickable link
+
+5. Footer
+   - copyright
+   - optional links
+
+Image Handling:
+Images should be referenced locally in the same folder.
+
+Example:
+src="image.jpg"
+
+Interactivity:
+- button clicks
+- navigation
+- hover effects
+
+Design Effects:
+- smooth hover animations
+- shadows or glow effects
+- responsive layout
+
+Output Format:
+Return ONLY the final complete index.html file.
+</pre>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+© Ralph aying's Website Creation Tutorial
+</footer>
+
+<script>
+
+function go(link){
+    window.open(link, "_blank", "noopener,noreferrer");
+}
+
+</script>
 
 </body>
 </html>
-
